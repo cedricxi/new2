@@ -1,3 +1,4 @@
+import java.lang.classfile.instruction.SwitchCase;
 import java.util.Scanner;
 
 //TIP Чтобы <b>запустить</b> код, нажмите <shortcut actionId="Run"/> или
@@ -5,22 +6,44 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         while(true) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("введите число 1");
-            float n = sc.nextInt();
-            System.out.println("введите число 2");
-            float m = sc.nextInt();
-            System.out.println("введите число 3");
-            float f = sc.nextInt();
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Введите число 1");
 
-            if (n > m && n > f) {
-                System.out.println(n);
-            } else if  (n < f && f > m) {
-                System.out.println(f);
-            }else{
-                System.out.println(m);
-            }
+            float n = scanner.nextInt();
+            System.out.println("Введите число 2");
+
+            float m = scanner.nextInt();
+            System.out.println("Введите операцию");
+            String b = scanner.next();
+            System.out.println("Введите операцию");
+
+
+                switch (b) {
+                    case "+" -> System.out.println(n + m);
+                    case "-" -> System.out.println(n - m);
+                    case "*" -> System.out.println(n * m);
+                    case "/" -> System.out.println(n / m);
+                    default -> System.out.println("Операция не распознана. Повторите ввод.");
+
+                }
+
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
 }
